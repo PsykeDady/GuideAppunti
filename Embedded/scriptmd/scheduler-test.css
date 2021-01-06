@@ -1,0 +1,33 @@
+body{
+    widows: 90vw;
+    height: 100vh;
+}
+#decdiv{
+    background-color: lightblue;
+    width: 8%;
+}
+#checkdiv{
+    background-color: lightcyan;
+    width: 33%;
+}
+#recdiv{
+    background-color: yellow;
+    width: 28%;
+}
+#swdiv{
+    background-color:greenyellow;
+    width: 3%;
+}
+#lcddiv{
+    background-color: pink;
+    width: 18%;
+}
+
+.linea{
+    display: inline-block;
+
+}
+
+/*decdiv checkdiv recdiv swdiv lcddiv*/
+/*blue azzurro giallo verde rosa*/
+/*2 4 5 1 3*/
