@@ -109,3 +109,17 @@ Queste tecnica è detta anche **microprogrammazione**,
 > <u>NOTA STORICA</u>:
 >
 > La distinzione a livelli avvenne dopo gli anni 50. Prima ogni istruzione era identificata da un determinato componente e basta. 
+
+
+
+
+
+
+
+# LEGENDA
+
+Template e legenda di note e stili di scrittura usati
+
+> <u>NOTA</u>:
+>
+> contiene delle note su tutto quello che 
