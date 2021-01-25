@@ -112,9 +112,19 @@ Queste tecnica è detta anche **microprogrammazione**,
 
 
 
+### legge di Moore
+
+Nel 1965 Gordon Moore ipotizzò che il numero dei transistori sarebbe raddoppiato ogni 12 mesi, questa osservazione cambia negli anni 80 dove il periodo di raddoppiamento raddoppia anch'esso ( il numero dei transistori raddoppia ogni 24 mesi ) e si stabilizza in un secondo momento in una versione finale così formulata: 
+
+> **<u>La legge di Moore (ver. finale)</u>**
+>
+> *"La capacità di elaborazione raddoppia ogni 18 mesi"*
 
 
 
+## Il processo di produzione dei microprocessori
+
+Per produrre componenti di calcolo, la risorsa più importante è il silicio 
 
 # LEGENDA
 
@@ -122,4 +132,8 @@ Template e legenda di note e stili di scrittura usati
 
 > <u>NOTA</u>:
 >
-> contiene delle note su tutto quello che 
+> note varie 
+
+> <u>**Citazione o legge**</u>
+>
+> *"testo della citazione o della legge"*
