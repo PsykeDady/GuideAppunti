@@ -150,7 +150,15 @@ Vengono poi applicate le seguenti fasi:
 
 Il wafer viene suddiviso poi in piccoli pezzi regolari e su ognuno di questi vengono posizionati i componenti, viene così creato il componente. Più i componenti creati ( e quindi i pezzi ) sono piccoli, più probabilmente verranno fuori difetti dai vari componenti (che quindi verranno eliminati) 
 
-Nel tempo, si è andati per la così detta "**miniaturizzazione**" dei componenti, si è passati dall'ordine dei <u>`10&micro;m` nel 1971 con intel 4004</u> e si è arrivati, più recentemente (nel 2018 con Apple A12, processore ARM) alla tecnologia a `7nm`, son previste tecnologie a `5nm` per i prossimi anni ma si parla anche di "*stop della miniaturizzazione*", per via dei limiti fisici e prestazionali del processo.
+Nel tempo, si è andati per la così detta "**miniaturizzazione**" dei componenti, si è passati dall'ordine dei <u>`10&micro;m` nel 1971 con intel 4004</u> e si è arrivati, più recentemente (nel 2018 con **Apple A12**, *processore ARM*) alla tecnologia a `7nm`, son previste tecnologie a `5nm` per i prossimi anni ma si parla anche di "*stop della miniaturizzazione*", per via dei limiti fisici e prestazionali del processo.
+
+
+
+## Prestazioni del calcolatore 
+
+Il primo importante passo verso la comprensione delle prestazioni di un calcolatore, è capire l'importante differenza tra prestazioni della cpu e quelle della ram
+
+
 
 
 
