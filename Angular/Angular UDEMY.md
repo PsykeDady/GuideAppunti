@@ -1,10 +1,26 @@
-# Angular UDEMY
+<div style="font-size: 36px;
+            text-align: center;
+            text-decoration: underline;
+            color: #b39ddb;
+            text-shadow: 
+            0px 0px 1.5px black,
+            0.5px 0px 1.5px black,
+            0px 0.5px 1.5px black,
+            0.5px 0.5px 1.5px black;
+            width:100%">
+    <p>Angular UDEMY</p>
+</div>
+
 
 *A cura di* `Davide Galati (in arte PsykeDady)`
 
 ____
 
-## LICENZA
+![Angular Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png)
+
+<div style="page-break-after: always;"></div>
+
+# LICENZA
 
 Il seguente documento è rilasciato sotto licenza `GNU Free Documentation License`.
 
@@ -29,7 +45,7 @@ Potete trovare il sorgente originale in libera consultazione o per partecipare c
 
 
 
-## Strumenti usati 
+# Strumenti usati 
 
 Per stilare la guida son stati utilizzati i seguenti strumenti :
 
@@ -37,7 +53,7 @@ Per stilare la guida son stati utilizzati i seguenti strumenti :
   - Son stati utilizzati i grafici [Mermaid](https://mermaid-js.github.io/mermaid/#/)
 - [Il corso Udemy di Academind](https://www.udemy.com/course/the-complete-guide-to-angular-2) 
 
-## I MIEI PROGETTI
+# I MIEI PROGETTI
 
 Puoi trovare i progetti su cui mi sto esercitando nei seguenti link:
 
@@ -48,14 +64,14 @@ Puoi trovare i progetti su cui mi sto esercitando nei seguenti link:
 
 
 
-## Angular 
+# Angular 
 
 Angular &egrave; un framework open source di nodejs che consente di scrivere in maniera molto semplice delle single app application.
 
 
 Angular utilizza **Typescript**, ovvero un linguaggio (Sviluppato da Microsoft) derivato da Javascript che lo completa aggiungendo la tipizzazione statica (rendendolo di fatti un linguaggio più robusto). Il client di Angular trasforma poi [Typescript in JavaScript](https://linuxhub.it/articles/howtodev-typescript-introduzione/).
 
-### Versioni di angular
+## Versioni di angular
 
 Angular ha fondamentalmente due rilasci Major : 
 
@@ -68,7 +84,7 @@ A sua volta, Angular viene rilasciato con degli aggiornamenti minori con una sch
 
 
 
-## Angular e npm
+# Angular e npm
 
 Angular &egrave; un framework di *node*, per installare il suo client (`Angular/cli`) nel nostro progetto sarà necessario quindi utilizzare il package manager di node, cio&egrave; **npm** ( e **yarn** )
 
@@ -92,7 +108,7 @@ npm install -g @angular/cli@lastest
 
 Il client di Angular si richiama poi con l'istruzione `ng`.
 
-## NG - creare un nuovo progetto 
+# NG - creare un nuovo progetto 
 
 
 
@@ -141,7 +157,7 @@ Al primo avvio ci saranno alcune importanti informazioni su Angular stesso ( *do
 
 
 
-### Installazione di dipendenze in un progetto già esistente
+## Installazione di dipendenze in un progetto già esistente
 
 Quando ci si scarica un progetto già esistente, conviene sempre installare tutte le dipendenze.   
 
@@ -153,7 +169,7 @@ npm i
 
 
 
-### Cambiare porta 
+## Cambiare porta 
 
 Si può pensare di cambiare porta di ascolto con angular utilizzando il flag `--port`. Supponiamo di voler usare la porta `8080`
 
@@ -163,7 +179,7 @@ ng serve --port 8080
 
 
 
-### Raggiungere angular in test da qualunque device casalingo
+## Raggiungere angular in test da qualunque device casalingo
 
 Normalmente angular permette solo al **pc corrente** ( `localhost` ) di accedere all'applicazione.  
 
@@ -187,7 +203,7 @@ In questo caso si utilizza l'host simbolico `0.0.0.0`, che generalmente si utili
 
 
 
-### comando completo 
+## comando completo 
 
 Ecco un comando completo da copiarsi e incollarsi per il caso più generico possibile: 
 
@@ -201,7 +217,7 @@ Se la porta `4200` è occupata, angular stesso ci chiederà se vogliamo che lui 
 
 
 
-### SSL - OPENSSL deprecato
+## SSL - OPENSSL deprecato
 
 Su alcune installazioni, visto che openssl è stato deprecato, potrebbe dare un problema: 
 
@@ -243,7 +259,7 @@ $env:NODE_OPTIONS="--openssl-legacy-provider";
 
 Ecco i comandi completi: 
 
-#### Linux e Windows CMD
+### Linux e Windows CMD
 
 ```bash
 set NODE_OPTIONS=--openssl-legacy-provider && ng serve --host 0.0.0.0 --disable-host-check true --port NUMEROPORTA
@@ -251,7 +267,7 @@ set NODE_OPTIONS=--openssl-legacy-provider && ng serve --host 0.0.0.0 --disable-
 
 
 
-#### Windows Powershell
+### Windows Powershell
 
 ```powershell
 $env:NODE_OPTIONS="--openssl-legacy-provider"; ng serve --host 0.0.0.0 --disable-host-check true --port NUMEROPORTA
@@ -259,7 +275,7 @@ $env:NODE_OPTIONS="--openssl-legacy-provider"; ng serve --host 0.0.0.0 --disable
 
 
 
-## Prime modifiche al progetto
+# Prime modifiche al progetto
 
 
 
@@ -290,7 +306,7 @@ Ovviamente la struttura può cambiare di progetto in progetto
 
 
 
-## Usare bootstrap con angular
+# Usare bootstrap con angular
 
 
 
@@ -314,7 +330,7 @@ Quindi aggiungiamo al vettore "`node_modules/bootstrap/dist/css/bootstrap.min.cs
 
 
 
-## Single Page Application 
+# Single Page Application 
 
 
 
@@ -330,7 +346,7 @@ Nel file **index** troviamo tra le altre questa riga:
 
  
 
-### Component
+## Component
 
 Questo strano tag, che non &egrave; uno standard di *html*, lo possiamo ritrovare anche nel file *app/app.component.ts* nella notazione `@Component` proprietà `selector`: 
 
@@ -350,7 +366,7 @@ Queste informazioni son memorizzate poi nella classe a cui si riferisce l'annota
 
 
 
-### Module
+## Module
 
 Innanzitutto tutte quste informazioni vengono dichiarate all'interno del **modulo** `app/app.module.ts`, e quindi importate dal  `main.ts` che &egrave; il file che viene compilato da **angular**
 
@@ -371,7 +387,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 
 
-#### bootstrap
+### bootstrap
 
 In questa procedura &egrave; importatissimo il concetto di `bootstrap` ( non la libreria, ma un istruzione di Angular)
 
@@ -405,7 +421,7 @@ Notiamo quindi un vettore che si chiama `bootrap`, che contiene il Component `Ap
 
 
 
-### Uno schema riassuntivo
+## Uno schema riassuntivo
 
 
 ```mermaid
@@ -418,7 +434,7 @@ graph TD;
 
 
 
-## Component 
+# Component 
 
 Analizziamo nel dettaglio un component 
 Partiamo dal suo typescript.
@@ -457,7 +473,7 @@ Quindi scriviamo le informazioni `selector`, `templateUrl` , `StyleUrls` nell'an
 
 
 
-### Creare component da cli
+## Creare component da cli
 
 I componenti possono essere creati anche da terminale utilizzando il cli con l'istruzione : 
 
@@ -491,7 +507,7 @@ ng generate component nomecomponente --skip-tests
 
 
 
-### definire codice html inline
+## definire codice html inline
 
 il codice html può essere definito anche all'interno di typescript stesso, senza utilizzare il file di template.
 
@@ -518,11 +534,11 @@ Nota che per inserire codice su più linee, &egrave; necessario usare il `backti
 
 
 
-#### css 
+### css 
 
 La stessa identica cosa &egrave; possibile farla con la proprietà `styles` e quindi con i css 
 
-## Module 
+# Module 
 
 il modulo &egrave; un file typescript particolare che si occupa di descrivere le parti di un componente e come utilizzarlo
 
@@ -562,7 +578,7 @@ I valori che troviamo al suo interno sono:
 
 
 
-## Usare un component in un altro 
+# Usare un component in un altro 
 
 Creiamo un component semplice: 
 
@@ -635,7 +651,7 @@ Adesso dovremmo vedere il nuovo componente usando AppComponent
 
 
 
-## Databinding 
+# Databinding 
 
 Uno dei pregi di sviluppare web app con angular &egrave; quello di inserire elementi dinamici nelle pagine html. 
 Ad esempio attraverso l'interpolazione &egrave; facilmente possibile inserire i valori di alcune variabili in html.
@@ -675,7 +691,7 @@ Oltre la string interpolation si ha:
 
 
 
-### string interpolation 
+## string interpolation 
 
 Tramite la string interpolation &egrave; molto semplice inserire del testo calcolato dinamicamente tramite codici typescript in un testo html.
 
@@ -709,7 +725,7 @@ Attraverso le doppie parentesi si può inserire qualunque istruzione typescript 
 
 
 
-### Static variables String interpolation
+## Static variables String interpolation
 
 Nel caso di variabili statiche, per richiamare l'interpolazione è leggermente più complesso il procedimento. Va creata una variabile che rappresenta la classe statica da cui richiamare i nostri valori statici: 
 
@@ -732,7 +748,7 @@ Quindi possiamo scrivere:
 
 
 
-### property binding 
+## property binding 
 
 La property binding consente di inserire delle condizioni booleane che vanno ad abilitare o disabilitare alcune proprietà degli elementi html. 
 
@@ -769,7 +785,7 @@ export class AppComponent {
 
 
 
-### event binding 
+## event binding 
 
 Serve collegare anche come reagisce un eventuale componente con l'utente e quindi con il codice ts che c'&egrave; dietro
 a questo serve l'event binding. 
@@ -809,7 +825,7 @@ export class AppComponent {
 }
 ```
 
-#### Lista degli eventi 
+### Lista degli eventi 
 
 la lista degli eventi disponibili sono gli stessi che si avrebbero in html, senza il prefisso *on*.   
 `onClick` diventa `click` ad esempio. 
@@ -841,7 +857,7 @@ Ecco alcuni degli elementi catturati da angular:
 
 
 
-### event data
+## event data
 
 Supponiamo un text input, vogliamo collezionarne il contenuto o tasto per tasto o comunque analizzarne pezzo per pezzo: 
 
@@ -895,7 +911,7 @@ scrivi (event:Event){
 
 
 
-### Two Way Binding
+## Two Way Binding
 
 
 
@@ -929,7 +945,7 @@ In questo modo la variabile cambierà insieme al valore della input text
 
 
 
-## Direttive
+# Direttive
 
 Attraverso le direttive &egrave; possibile inserire della logica all'interno del nostro codice HTML. 
 Per creare una direttiva nuova si deve utilizzare l'annotazione `@Directive`: 
@@ -953,7 +969,7 @@ Ma molte direttive sono già incluse nel core di angular, vediamo come si utiliz
 
 
 
-### direttive strutturali e di attributo 
+## direttive strutturali e di attributo 
 
 Esistono due tipi di direttive, quelle che cambiano l'html (dette strutturali) e quelle che invece cambiano gli elementi al suo interno.
 
@@ -968,7 +984,7 @@ Le <u>direttive strutturali</u> vanno richiamate con un `*` davanti
 > 
 > Non possiamo avere più di una direttiva strutturale per tag
 
-### *ngIf
+## *ngIf
 
 Questa direttiva ci consente di abilitare parte del codice html solo se una determinata condizione &egrave; soddisfatta. Ad esempio: 
 
@@ -1033,7 +1049,7 @@ Per implementare un else nell'`ngIf` si utilizza la `local directive`, così:
 
 
 
-### ngStyle
+## ngStyle
 
 Tramite la direttiva ngStyle possiamo cambiare in maniera dinamica lo stile dei nostri componenti.
 
@@ -1085,7 +1101,7 @@ coloreCasuale(){
 
 
 
-### ngClass
+## ngClass
 
 Similarmente a ngStyle, &egrave; possibile aggungere classi dinamicamente utilizzando typescript. Ecco la sintassi: 
 `[ngClass]="{classe:boolean}"`  
@@ -1115,7 +1131,7 @@ var sfondo=Math.random()>0.5?"rosso":"bianco"
 
 
 
-### *ngFor 
+## *ngFor 
 
 una direttiva molto utile &egrave; `ngFor`, che consente di cambiare dinamicamente il contenuto di una pagina in base al contenuto di una lista.
 
@@ -1157,7 +1173,7 @@ Queste variabili possiamo poi utilizzarle anche in altre direttive o codici type
 
 s
 
-#### bug con input-group
+### bug con input-group
 
 Usando un Ng for con un input group vi è un bug che riporta allo stato di default l'elemento dell'input appena lo si smette di editare, per superarlo bisogna usare la funzione trackby. Scrivere il seguente template nell'html:
 
@@ -1173,7 +1189,7 @@ trackByFn(index, item) {
 }
 ```
 
-### [ngSwitch]
+## [ngSwitch]
 
 Una particolare direttiva è quella dell' `ngSwitch` che di per se è una direttiva "**attribuitiva**" ma che utilizza al suo interno delle direttive "**strutturali**". 
 Vediamo come si usa: 
@@ -1213,23 +1229,23 @@ e html:
 
 
 
-## Debug application 
+# Debug application 
 
 
 
-### Gli errori 
+## Gli errori 
 
 La gestione e la stampa degli errori in console ( sugli strumenti di sviluppatore del nostro browser ) son migliorati da Angular e risultano leggermente più utili di quelli che normalmente stamperebbe Javascript. 
 
 
 
-### Il debug 
+## Il debug 
 
 Angular supporta *il source mapping*.  
 
 In parole povere possiamo mandare in debug l'applicazione dagli strumenti per sviluppatori del nostro browser accedendo al codice typescript originale nonostante in realtà il browser utilizzi un bundle compresso.
 
-#### step-by-step
+### step-by-step
 
 Inserire un punto di debug nel codice ( risulterà un codice unico sotto il nome di `main.js` o `main.bundle.js`) in uno dei qualunque metodi typescript di cui farne il debug. Quando un evento scatenerà quel punto di debug, si verrà reindirizzati su un file typescript con il codice originale.
 
@@ -1240,13 +1256,13 @@ Nei vari browser esistono diversi modi per accedere alla pagina del "codice sorg
 
 
 
-#### WEBPACK 
+### WEBPACK 
 
 Sempre nella scheda dei codici sorgenti possiamo anche identificare direttamente il nostro codice sorgente in typescript andando nella sorgente denominata WEBPACK, la quale scandisce il nostro file system nella cartella del progetto facendoci vedere le varie parti ( cartella src/app e i vari ts )
 
 
 
-## Custom Property Binding
+# Custom Property Binding
 
 Di default gli attributi di una determinata classe che rappresenta un component sono accessibili solo dal componente html di quello stesso componente. 
 Supponendo di avere quindi un certo componente server: 
@@ -1304,7 +1320,7 @@ export class ServerElementComponent  {
 
 
 
-#### Property binding senza quadre 
+### Property binding senza quadre 
 
 Si può fare un property binding senza parentesi quadre se l'elemento che si vuole passare è una stringa. Normalmente il property binding di una stringa avviene così : 
 
@@ -1332,7 +1348,7 @@ Anche se non è una pratica molto leggibile, si potrebbe confondere *la custom p
 
 
 
-#### Direttive strutturali viste come property binding 
+### Direttive strutturali viste come property binding 
 
 In realtà le direttive strutturali sono delle property binding dell'elemento `ng-template`, dunque il codice: 
 
@@ -1358,7 +1374,7 @@ In realtà le direttive strutturali sono delle property binding dell'elemento `n
 
 
 
-### Rinominare un Input property ( alias )
+## Rinominare un Input property ( alias )
 
 L'annotazione Input va richiamata davanti la proprietà da "esporre" come fosse una funzione. Ma cosa possiamo inserire all'interno di quella funzione? 
 
@@ -1384,7 +1400,7 @@ Se utilizziamo un alias non possiamo ovviamente più richiamare la proprietà co
 
 
 
-## Custom Event Binding 
+# Custom Event Binding 
 
 Similmente a come si possono esporre delle proprietà, possiamo esporre degli eventi. In realtà gli eventi in una classe con anch'essi degli attributi di tipo `EventEmitter` da `angular/core`. 
 
@@ -1495,7 +1511,7 @@ onBlueprintAdded(data:{name:string,content:string}){
 
 
 
-#### Rinominare un Output property (alias) 
+### Rinominare un Output property (alias) 
 
 Anche nel caso dell'output si può creare un alias da utilizzare al posto del nome della variabile semplicemente passando una stringa al tempo della creazione dell'annotazione `Output`. Nell'esempio precedente possiamo modificare come segue: 
 
@@ -1519,13 +1535,13 @@ Ovviamente anche in questo caso se viene definito un alias non &egrave; poi poss
 
 
 
-## CSS style e View Encapsulation 
+# CSS style e View Encapsulation 
 
 Normalmente lo stile su Angular viene poi replicato con una tecnica chiamata "emulazione". Ma emulazione di che? Ciò che viene emulato &egrave; una tecnica chiamata **ShadowDOM** 
 
 
 
-### Shadow DOM 
+## Shadow DOM 
 
 lo **Shadow DOM** &egrave; una tecnologia presente in alcuni browser capace di generare codice HTML al runtime sotto alcune condizioni senza che sia necessariamente presente il file html.
 
@@ -1535,7 +1551,7 @@ Lo shadow DOM non &egrave; però supportato da qualunque browser ( i nuovi brows
 
 [Qui si trova un esempio di codice che genera uno Shadow DOM](https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b) ( e verifica anche il browser con un eventuale compatibilità)
 
-### Angular e l'emulazione dello shadow DOM
+## Angular e l'emulazione dello shadow DOM
 
 Per comportamento predefinito Angular emula il comportamento dello shadow DOM, questo rende comunque l'applicazione modulare ma meno leggera di come se usasse realmente lo shadow DOM, &egrave; comunque compatibile con tutti i tipi di browser. 
 All'interno di un componente &egrave; possibile definire se esso deve o no utilizzare l'incapsulamento agendo sull'annotazione `Component`, ecco come: 
@@ -1559,7 +1575,7 @@ i possibili valori sono:
 
 
 
-## Etichette ( Element References )
+# Etichette ( Element References )
 
 Ogni elemento di HTML può avere un etichetta, abbiamo già utilizzato questa funzione negli `ngIf` nel momento in cui si &egrave; specificato quale blocco attivare in caso dell'`else`.  
 
@@ -1601,7 +1617,7 @@ Il suo valore può essere utilizzato anche all'interno dell'html usando la strin
 
 
 
-### @ViewChild
+## @ViewChild
 
 Tramite l'annotazione `@ViewChild` &egrave; possibile inizializzare all'interno del codice TypeScript una variabile che riflette un determinato componente con una certa etichetta locale.
 
@@ -1642,13 +1658,13 @@ reset(){
 
 
 
-#### Da Angular 8+ 
+### Da Angular 8+ 
 
 da angular 8+ non &egrave; più necessario aggiungere come secondo parametro `{static:true}`
 
 
 
-### @ContentChild
+## @ContentChild
 
 Similmente  Potreste utilizzare il `ContentChild` l'interno di un contenuto  
 
@@ -1662,11 +1678,11 @@ Similmente  Potreste utilizzare il `ContentChild` l'interno di un contenuto
 >
 > Non sono attualmente riuscito a fare funzionare questa cosa (da un `undefined`), ho letto che ci sono numerose perplessità in giro a riguardo
 
-## Il contenuto di un tag di un componente custom (ng-content)
+# Il contenuto di un tag di un componente custom (ng-content)
 
 Quando si crea un componente si viene a perdere per comportamento predefinito ciò che si scrive all'interno del suo tag. Questo contenuto può essere poi prelevato da angular.
 
-### ng-content
+## ng-content
 
 Attraverso il tag `<ng-content>` &egrave; possibile recuperare il contenuto del tag direttamente nell'HTML, supponiamo il componente `titolo-blu` ed il contenuto del suo file html: 
 
@@ -1691,7 +1707,7 @@ Ora semplicemente possiamo passare il contenuto dal componente padre:
 
 
 
-## Lifecycle 
+# Lifecycle 
 
 Ogni componente ha di per se alcuni eventi che vengono scatenati automaticamente e indipendentemente dal fatto che siano o meno chiamati e gestiti dal programmatore.
 
@@ -1708,7 +1724,7 @@ Questi sonoi:
 
 
 
-### ngOnInit
+## ngOnInit
 
 Questo hook viene chiamato ogni volta che il componente viene creato ma solo dopo il suo costruttore. 
 Per sfruttarne il meccanismo bisogna importare `OnInit` da `@angular/core` e implementare il metodo `ngOnInit` (senza parametri). 
@@ -1735,7 +1751,7 @@ init on app.component
 
 
 
-### ngOnChanges
+## ngOnChanges
 
 Questo hook viene chiamato per ogni cambiamento delle proprietà di un componente.  Se una determinata variabile all'interno del Typescript muta ad esempio, viene chiamato.  
 
@@ -1853,7 +1869,7 @@ Come si può vedere il metodo `onChange` viene richiamato per ogni lettera inser
 
 
 
-### ngDoCheck 
+## ngDoCheck 
 
 Questo hook viene chiamato per ogni modifica del componente che influenza in qualche modo gli elementi html o renderizzazione del componente.   
 
@@ -1875,7 +1891,7 @@ export class AppComponent implements DoCheck {
 
 
 
-### ngAfterContentInit
+## ngAfterContentInit
 
 Viene chiamato quando viene creato il testo di `<ng-content>`, anche se questo non viene poi utilizzato all'interno del componente.  
 
@@ -1891,7 +1907,7 @@ export class AppComponent implements AfterContentInit {
 
 
 
-### ngAfterContentChecked
+## ngAfterContentChecked
 
 Questo hook viene chiamato dopo che il rilevatore di modifiche ha controllato il contenuto di `<ng-content>` del componente, a prescindere se sia cambiato o no.  
 
@@ -1909,7 +1925,7 @@ export class AppComponent implements AfterContentChecked {
 
 
 
-### ngAfterViewInit
+## ngAfterViewInit
 
 Viene chiamato quando viene creato graficamente il componente e tutti i suoi figli  
 
@@ -1925,11 +1941,11 @@ export class AppComponent implements AfterViewInit {
 
 
 
-#### afterviewinit VS oninit
+### afterviewinit VS oninit
 
 Se si ha un elemento di tipo ngContent o che viene creato in tempo di visualizzazione su html, questo non lo si può vedere con ngoninit ma lo si può  vedere da afterviewinit
 
-### ngAfterViewChecked
+## ngAfterViewChecked
 
 Questo hook viene chiamato dopo che il rilevatore di modifiche ha controllato tutti i componenti grafici del componente e i suoi figli.
 
@@ -1944,7 +1960,7 @@ export class AppComponent implements AfterViewChecked {
 ```
 
 
-### ngOnDestroy 
+## ngOnDestroy 
 Questo hook viene chiamato quando viene rimosso dal DOM un componente.   
 
 Per sfruttarlo si implementa `OnDestroy` da `@angular/core` e si scrive il metodo `ngOnDestroy`: 
@@ -1959,7 +1975,7 @@ export class AppComponent implements OnDestroy {
 
 
 
-## Creare una direttiva 
+# Creare una direttiva 
 
 Le direttive si possono creare.   
 
@@ -2016,7 +2032,7 @@ costructor(elementRef:ElementRef){
 
 
 
-Andiamo nell` 'AppModule` e nel vettore dei *declaration* aggiungiamo la nostra direttiva: 
+Andiamo nell` 'AppModule` e nel vettore dei *declaration* **aggiungiamo la nostra direttiva**: 
 
 ```typescript
  declarations: [
@@ -2037,7 +2053,7 @@ Quindi ora possiamo utilizzarla nei nostri html:
 
 
 
-### Il Renderer (2)
+## Il Renderer (2)
 
 Si può agire in maniera più "intelligente" sui componenti utilizzando una classe chiamata `Renderer` importata da `@angular/core`, nel costruttore dopo la variabile di tipo `elementRef`: 
 
@@ -2061,7 +2077,7 @@ constructor(elementRef:ElementReference, renderer: Renderer2){
 
 Altre informazioni [sulla documentazione uffiale](https://angular.io/api/core/Renderer2).
 
-### eventi sulle direttive
+## eventi sulle direttive
 
 Possiamo abilitare delle modifiche sulle direttive in base agli eventi del DOM. Ad esempio l'evento `over` del mouse : 
 
@@ -2086,7 +2102,7 @@ Facciamo un esempio, aggiungiamo l'ombra ad un testo quando sorvolato:
 
 
 
-### HostBinding
+## HostBinding
 
 Un altro modo di modificare i componenti oltre che con [ElementRef](##Creare-una-direttiva) e [Renderer2](###Il-Renderer-2) è tramite l'annotazione `@HostBinding` di `@angular/core`  che agisce direttamente su determinate proprietà del componente. Supponiamo di voler modificare direttamente il colore di background di un componente sotto una certa direttiva, aggiungiamo nella classe che rappresenta la direttiva una variabile siffatta.  
 
@@ -2126,7 +2142,7 @@ per applicarla.
 
 
 
-## Creare una direttiva strutturale 
+# Creare una direttiva strutturale 
 
 Si può creare una direttiva che modifichi la struttura del DOM, eliminando o aggiungendo dei pezzi di html. 
 Per farlo bisogna seguire alcuni passaggi. Creiamo una direttiva custom: 
@@ -2248,7 +2264,7 @@ Adesso possiamo scrivere:
 
 
 
-## Aggiungere un ascoltatore universale 
+# Aggiungere un ascoltatore universale 
 
 Si può aggiungere un ascoltatore universale ad un **componente** o una **direttiva** attraverso il parametro `host`. Supponiamo ad esempio una direttiva che apre un menu e di cui vogliamo che il menu si chiusa se si clicca al di fuori del componente. 
 
@@ -2321,7 +2337,7 @@ stiamo ponendo fase alla variabile "aperto" se l'elemento non contiene il target
 
 
 
-## Servizi 
+# Servizi 
 
 I servizi servono a centralizzare la logica del codice, si tratta in poche parole di creare delle classi Typescript che effettuano operazioni operazioni di vario tipo e che vengono richiamate e costruiti all'interno dei nostri componenti.   
 
@@ -2403,7 +2419,7 @@ In questo modo il `LoggingService` è raggiungibile da tutta l'applicazione (e *
 
 Possiamo anche utilizzare questa logica in un generico componente con più figli, e quel componente condividerà quel componente con tutti i suoi figli.
 
-### Servizio Dati
+## Servizio Dati
 
 I servizi sono spesso utilizzati per la memorizzazione di dati che devono essere raggiunti da tutta l'applicazione ( il così detto *storage*).
 
@@ -2531,7 +2547,7 @@ export class CockpitComponent {
 
 
 
-### Annotazione Injectable
+## Annotazione Injectable
 
 I servizi non sono né componenti ne direttive, ma son oggetti "Iniettabili", cioè il loro valore viene costruito da qualche parte in angular e quindi passati all'interno dei costruttori dei vari componenti che lo usano.   
 Volendo si può specificare in modo esplicito scrivendo un annotazione prima della classe, ovvero `@Injectable` (da `@angular/core` ). 
@@ -2573,7 +2589,7 @@ Pena del mancato inserimento dell'annotazione è quella di ricevere in console l
 </pre>
 
 
-### Comunicazione tramite EventEmitter cross-component
+## Comunicazione tramite EventEmitter cross-component
 
 Tramite i servizi come si è visto si può evitare la lunga catena di eventi che serve a portarsi i dati da un componente ad un altro. L'aggiornamento avviene in maniera totalmente automatica.  
 
@@ -2644,7 +2660,7 @@ Nell'esempio è stato fatto solo un assegnamento ad un Oggetto generico, ma ovvi
 
 
 
-## Routing Angular
+# Routing Angular
 
 Il routing serve a navigare l'applicazione disponendo più pagine che possono intercambiare tra di loro. 
 
@@ -2652,7 +2668,7 @@ Queste pagine rispondono poi a indirizzi URL diversi, anche se fondamentalmente 
 
 
 
-### Routes Type 
+## Routes Type 
 
 Il nostro routing parte dal componente **AppModule**, in cui bisogna creare una variabile di tipo Routes, importata da `@angular/router`.
 
@@ -2677,7 +2693,7 @@ localhost:porta/PATH2
 
 
 
-### RouterModule
+## RouterModule
 
 Va aggiunta al vettore degli import, sempre nell' `app.module`, il componente `RouterModule`, proveniente sempre da `@angular/router`. Quest'aggiunta va fatta **richiamando sull' modulo** il metodo "`forRoot`" e passandoci dentro la variabile creata prima: 
 
@@ -2697,7 +2713,7 @@ Va aggiunta al vettore degli import, sempre nell' `app.module`, il componente `R
 
 
 
-#### Router with hash
+### Router with hash
 
 In alcuni casi i nostri path potrebbero non funzionare perché i server che li gestiscono non trovato all'interno della cartella i percorsi da associare al path, oppure perché abbiamo a che fare con dei server molto vecchi. 
 
@@ -2719,7 +2735,7 @@ http://localhost:porta/#/path/indirizzo
 
 Questo non influenzerà la nostra programmazione in alcun modo! 
 
-### router-outlet
+## router-outlet
 
 Infine il nostro componente principale deve conoscere dove posizionare la pagina corrente, e questo avviene tramite la particolare direttiva `router-outlet`. 
 
@@ -2731,7 +2747,7 @@ Si richiama come un tag html ma in realtà è una direttiva:
 
 
 
-### link href (approccio errato)
+## link href (approccio errato)
 
 Ovviamente bisogna avere dei link nell'applicazione che reindirizzano poi alle pagine del routing. Generalmente si fa con il tag `<a>`: 
 
@@ -2745,7 +2761,7 @@ Ovviamente bisogna avere dei link nell'applicazione che reindirizzano poi alle p
 
 
 
-### link con routerLink
+## link con routerLink
 
 L'approccio più giusto è quello invece di utilizzare la direttiva di angular "`routerLink`". Questa direttiva permette di far rimanere l'applicazione in sessione ma cambiare comunque il contenuto delle pagine: 
 
@@ -2757,7 +2773,7 @@ L'approccio più giusto è quello invece di utilizzare la direttiva di angular "
 
 
 
-#### property Binding del routerLink
+### property Binding del routerLink
 
 Si può anche utilizzare l'annotazione della property binding con il routerLink, ma al suo interno dobbiamo inserire poi un istruzione di typescript: 
 
@@ -2799,7 +2815,7 @@ E quindi magari avere un procedimento che opera poi sui dati che modifichiamo, c
 
 
 
-#### Path assoluti vs path relativi 
+### Path assoluti vs path relativi 
 
 Quando inseriamo un path per cambiare pagina questo segue le normali regole di navigazione per cui :
 
@@ -2815,7 +2831,7 @@ Alternativamente possiamo usare la sintassi con i punti davanti per indicare :
 
 
 
-### routerLink style
+## routerLink style
 
 Un modo pulito di determinare quale scheda è attiva attraverso lo `style` del `routerLink` **è quello di utilizzare** `routerLinkActive`, direttiva che permette di aggiungere una classe ai link attivi. Vediamo come aggiungere la classe "`attivo`" al link effettivamente attivo, attraverso questa direttiva: 
 
@@ -2827,7 +2843,7 @@ Un modo pulito di determinare quale scheda è attiva attraverso lo `style` del `
 
 
 
-#### Path esatto 
+### Path esatto 
 
 Il `routerLinkActive` calcola quando il path segnato in `routerLink` è compreso nell'attuale barra degli indirizzi. Il che può portare a situazioni in cui quando un path ne contiene un altro si attivano entrambe le opzioni. L'esempio più eclatante è quando abbiamo a che fare con il percorso **home**, che di per se contiene tutti i path se lo lasciamo *vuoto*.
 
@@ -2847,7 +2863,7 @@ Senza la nuova proprietà che stiamo utilizzando il primo path sarebbe attivo se
 
 
 
-###  Routing attraverso typescript 
+##  Routing attraverso typescript 
 
 Si può fare tranquillamente routing da codice, utilizzando la classe `Router` importata da `@angular/router`, inseriamolo come dipendenza in un costruttore di un componente: 
 
@@ -2865,7 +2881,7 @@ navigateToHome(){
 
 
 
-#### Le proprietà di navigate
+### Le proprietà di navigate
 
 Normalmente il path che passiamo a navigate di Route è di tipo assoluto, per passare un path relativo, dobbiamo fare qualche passaggio in più.
 
@@ -2898,7 +2914,7 @@ Ora, ogni qual volta quell'istruzione verrà chiamata, l'applicazione non verrà
 
 
 
-### Passare i parametri al routing
+## Passare i parametri al routing
 
 Spesso è necessario non solo avere il routing, ma rendere alcune parti del routing "dinamiche", in cui nel link stesso viene inserita una particolare informazione su ciò che ci si aspetta nel contenuto della pagina (un particolare prodotto, un utente, un luogo, etc...).
 
@@ -2974,7 +2990,7 @@ ciao
 
 
 
-#### i limiti di snapshot 
+### i limiti di snapshot 
 
 Questo approccio però ha dei difetti: nello specifico se all'interno della pagina vi sono dei pulsanti di ricaricamento di nuovi dati, l'indirizzo cambia ma i dati nella pagina non mutano. Questo perché angular non ricarica una pagina se non vengono esplicitamente ricaricati i dati, e il routing non cambia in modo esplicito la struttura o i dati della pagina, ma lo fa in seguito a delle operazioni. 
 
@@ -3034,7 +3050,7 @@ Ora ogni qual volta verrà modificato l'indirizzo, anche da dentro la pagina ste
 
 
 
-### routing with query parameter e fragment
+## routing with query parameter e fragment
 
 I link spesso possono contenere i query parameter e i fragment. Per chiarire, i query parameters son quelle parti del link introdotte da `?` e separate da `&`, ad esempio: 
 
@@ -3073,7 +3089,7 @@ http://ind.iri.zzo.web.dominio?query1=valore1&query2=valore2#sezione1
 >
 > Un `query1=true` non va ad esempio controllato poi come booleano, ma come stringa con `query==="true"`
 
-#### routing con query parameters e fragment da typescript 
+### routing con query parameters e fragment da typescript 
 
 Si può fare *routing tramite typescript* impostando anche *i query parameters*, passando al metodo `navigate` un <u>nuovo oggetto</u> che li racchiude. Vediamo come, supponiamo di voler raggiungere l'indirizzo: 
 
@@ -3117,7 +3133,7 @@ Come si può vedere non viene aggiunto nulla al path, ma vengono solo cambiati i
 
 
 
-##### merge dei parametri 
+#### merge dei parametri 
 
 Che succede se il link ha già un parametro quando si utilizza il metodo navigate? Il comportamento di default vuole che i vecchi parametri vengano sovrascritti. Per ciò il link: 
 
@@ -3195,7 +3211,7 @@ Diventa:
 http://ind.iri.zzo.web.dominio?query1=valore1&query2=valore2
 ```
 
-#### routing con query parameters e fragment da html
+### routing con query parameters e fragment da html
 
 tramite il tag a ( anchor ) è possibile mettere un link direttamente nel nostro codice come abbiamo già fatto [in una precedente sessione](###link-con-routerLink) attraverso `routerLink` e altre direttive.
 
@@ -3227,7 +3243,7 @@ O nella forma più compatta:
 
 
 
-#### prelevare query params e fragment con snapshot
+### prelevare query params e fragment con snapshot
 
 Per ottenere il valore in maniera statica e senza alcun aggiornamento dei query params e del fragment si può ricorrere allo snapshot, utilizzando `ActivatedRouter` basta scrivere:  
 
@@ -3247,7 +3263,7 @@ activatedRouter.snapshot.fragment
 
 Per ottenere il fragment
 
-#### prelevare query params e fragment con observable
+### prelevare query params e fragment con observable
 
 Ovviamente esistono anche le versioni *observable* di query params e fragment, che si richiamano direttamente sull'`activatedRouter`, in questo modo : 
 
@@ -3290,7 +3306,7 @@ Cioè i parametri delle query verranno trasformati in stringa vuota.
 
 
 
-### Child routing
+## Child routing
 
 Una determinata route può avere delle rotte "figlie", cioè che condividono una determinata rotta in comune Ma aggiungendo delle informazioni. Attraverso il meccanismo dei child è possibile anche condividere parte della pagina con il padre, ciò consente di conservare degli elementi che potrebbero essere utili ed usare il meccanismo della navigazione per caricare gli elementi dinamicamente. 
 
@@ -3328,7 +3344,7 @@ Ora come si usano le sotto-rotte? Innanzitutto nel componente padre dobbiamo ins
 
 
 
-#### passare un dato ad un componente router outlet
+### passare un dato ad un componente router outlet
 
 Se un componente figlio possiede dei parametri con annotazione `@Input()`, con questo metodo si perde la possibilità di passare il valore di quei parametri.  
 Se un alternativa resta comunque quella di utilizzare un servizio, è anche vero che si può agire forzando il meccanismo di assegnamento di quei parametri dall'esterno utilizzando l'evento `activate`.  Ecco come, innanzitutto assegnamo all'evento un metodo di nostra creazione
@@ -3367,7 +3383,7 @@ export class ComponentePadre {
 
 
 
-### Redirect, gestione path generici ed errori
+## Redirect, gestione path generici ed errori
 
 Ci sono vari motivi che ci possono portare a voler gestire dei percorsi nei nostri indirizzi che non sono precisi, ma che devono comunque indirizzare a determinate pagine. L'esempio più lampante sono le pagine di *errore*, se una pagina non è prevista nel nostro software è comune mostrare un avviso di "pagina non trovata". 
 Supponiamo quindi un componente che abbia lo scopo di intercettare una `page not found`: 
@@ -3422,7 +3438,7 @@ const appRoutes : Routes = [
 
 
 
-#### Il percorso di default
+### Il percorso di default
 
 Se avete implementato il meccanismo del routing, la pagina "Home" della vostra applicazione è sempre vuota in attesa che voi clicchiate un menu in particolare dall'headbar. Questa cosa non è molto user-friendy, potreste invece pensare di creare un percorso di default. 
 
@@ -3450,7 +3466,7 @@ const appRoutes : Routes = [
 
 questo dirà al nostro router che il redirect va fatto **solo** se il path è per intero una stringa vuota.
 
-### App Router Module o routing with out sourcing
+## App Router Module o routing with out sourcing
 
 Per impostare il routing fino ad ora si è utilizzato `app.module.ts`, ma con un routing complicato e lungo potrebbe sporcare il modulo principale un applicazione. Per un approccio più pulito si può pensare di inserirlo in un modulo a parte. 
 
@@ -3538,7 +3554,7 @@ export class AppModule { }
 
 
 
-### Passaggio dei dati attraverso il routing
+## Passaggio dei dati attraverso il routing
 
 Già con gli strumenti che abbiamo è possibile passarsi, in vari modi oltretutto, dati attraverso la navigazione delle varie pagine.  
 
@@ -3574,7 +3590,7 @@ constructor(activateRoute: ActivateRoute){
 
 
 
-### Riassunto visivo passaggio dati 
+## Riassunto visivo passaggio dati 
 
 un piccolo riassunto di come di passano i dati su angular attraverso vari metodi di routing: 
 
@@ -3591,7 +3607,7 @@ un piccolo riassunto di come di passano i dati su angular attraverso vari metodi
 
 
 
-## Routing Guard
+# Routing Guard
 
 Non tutte le rotte devono essere raggiunte dagli utenti che a volte devono essere autorizzati a vedere alcune pagine del sito ad esempio.  
 
@@ -3600,7 +3616,7 @@ In questo caso ci potrebbe volere quello che si chiama "**routing guard**".
 Questo particolare tipo di classi controlla delle condizioni per cui poi può decidere se una determinata rotta, a determinate condizioni, è concessa o no. 
 
 
-### Implementare un servizio di attivazione 
+## Implementare un servizio di attivazione 
 
 La prima cosa da fare è creare un proprio servizio di attivazione. Tali servizi estendono la classe `CanActivate` e quindi implementano il metodo `canActivate`. 
 
@@ -3655,7 +3671,7 @@ Con **routerStateSnapshot** invece potete controllare l'intero url (*base dell'i
 
 
 
-#### Cambiare URL con canActivate e URLTree
+### Cambiare URL con canActivate e URLTree
 
 Quando l'attivazione di una route non va a buon fine potrebbe essere necessario navigare verso un altra pagina. 
 
@@ -3686,7 +3702,7 @@ export class Gandalf implements CanActivate{
 
 
 
-### L'attivazione 
+## L'attivazione 
 
 Una volta creato il servizio di attivazione va collegato alle variabili di routing interessate, andiamo sul nostro Modulo di routing (sia che sia AppModule sia che l'abbiamo creato noi) e nell'array dei moduli andiamo ad aggiungere, li dove necessario, la proprietà `canActivate` inserendo come valore un array nel quale poi sarà specificato il nostro servizio: 
 
@@ -3717,7 +3733,7 @@ Per attivare invece solo i figli e non il padre, si può:
 oppure: 
 - utilizzate il `canActivateChild`, che necessità però di un altro tipo di servizio
 
-### canActivateChild
+## canActivateChild
 Attraverso il `canActivateChild` si può decidere di mettere una guardia su tutti i figli di un determinato componente ma non sul componente stesso. Questo potrebbe essere comodo se il numero di figli è alto e bisogna attivarli tutti, ma non il padre. 
 
 Per utilizzare questa proprietà, il servizio deve implementare la classe `CanActivateChild` ( sempre da `@angular/router`) ed il metodo `canActivate` :
@@ -3747,7 +3763,7 @@ const appRoutes: Routes = [
 ];
 ```
 
-### canDeactivate
+## canDeactivate
 
 Questa guardia viene attivata quando un link viene disattivato, o meglio viene cambiato. 
 
@@ -3778,7 +3794,7 @@ Ovviamente il servizio deve essere inserito nell'array di provider, e si possono
 
 
 
-### Il Resolver e il passaggio dei dati dinamici attraverso il routing
+## Il Resolver e il passaggio dei dati dinamici attraverso il routing
 
 Abbiamo gi&agrave; visto come passare i dati in [maniera statica attraverso il routing](###Passaggio-dei-dati-attraverso-il-routing), attraverso una particolare guadia chiamata **Resolver**, possiamo intercettare la navigazione e rendere questo passaggio dinamico. 
 
@@ -3812,7 +3828,7 @@ constructor( activatedRoute :ActivatedRoute ) {
 
 
 
-### Catena di chiamate di Guardie e Resolvers
+## Catena di chiamate di Guardie e Resolvers
 
 È bene ricordare che in ordine le Guardie vengono chiamate **prima** dei resolver: 
 
@@ -3826,7 +3842,7 @@ flowchart TD
 
 Se un determinato dato quindi deve essere disponibile già a livello di guardia, non può essere il *Resolver* ad occuparsene. **La guardia stessa deve fare da Resolver**.
 
-## Subscription e Observable
+# Subscription e Observable
 
 Gli **observable** sono sostanzialmente delle fonti di dati che possono essere scaturite in determinati momenti o da determinati eventi.
 
@@ -3834,7 +3850,7 @@ Un **observable** può essere continuamente monitorato da un **observer**, che v
 
 
 
-### subscribe
+## subscribe
 
 Il metodo principale degli observable è sicuramente `subscribe`, ovvero il metodo che innesca il meccanismo di sottoscrizione allo scatenarsi degli eventi che cambiano il valore definito come osservabile.  
 Dato un osservabile qualunque ci si sottoscrive così: 
@@ -3846,7 +3862,7 @@ osservabile.subscribe((parametri,lambda) => {
 
 
 
-### unsubscribe
+## unsubscribe
 
 Gli observable son thread che vengono eseguiti indipendentemente se il componente che si sottoscrive esistono o meno. Per le sottoscrizioni fornite da Angular non abbiamo mai avuto la necessità di "distruggere" anche le sottoscrizioni, ma normalmente è giusto farlo, se in un costruttore è stato chiamato il subscrive un un observable custom, bisogna memorizzarlo in una variabile di tipo `Subscription`, del package `rxjs`: 
 
@@ -3872,11 +3888,11 @@ ngOnDestroy() {
 
 
 
-#### Nota Bene:
+### Nota Bene:
 
 Gli `Observable` forniti da Angular come i parametri di `ActiveRoute` son poi gestiti automaticamente da Angular stesso.  
 
-### rxjs
+## rxjs
 
 Tutto ciò che riguarda gli Observable è nel framework di javascript chiamato **rxjs**. Per installarlo: 
 
@@ -3897,11 +3913,11 @@ Potrebbe essere necessario anche il pacchetto compat per alcune funzioni:
 npm install --save rxjs-compat
 ```
 
-#### NOTA BENE: 
+### NOTA BENE: 
 Installando **Angular**, `rxjs` dovrebbe essere automaticamente installato
 
 
-### Gli interval 
+## Gli interval 
 
 Gli interval sono una tipologia di observable che emette un evento ogni determinato intervallo di tempo.
 
@@ -3921,10 +3937,10 @@ interval(nmillis).subscribe( (iterazione attuale) => {
 })
 ```
 
-#### NOTA BENE: 
+### NOTA BENE: 
 Gli intervals continuano anche se il componente che li ospita non è più attivo, vanno quindi fermati esplicitamente con unsubscribe
 
-#### Piccolo contatore: 
+### Piccolo contatore: 
 Segue un piccolo codice di esempio per un contatore: 
 
 **HTML**:
@@ -3983,7 +3999,7 @@ export class ContatoreComponent implements OnInit, OnDestroy {
 
 
 
-### Creare un proprio Observable
+## Creare un proprio Observable
 
 Si può creare un Observable personalizzato partendo proprio dalla classe `Observable`, con il suo **costruttore** (nelle versioni precedenti di rxjs si utilizzava il metodo `create`). Per "mandare" ai suoi subscriber un nuovo dato bisogna utilizzare il metodo "`next`".  
 
@@ -4026,7 +4042,7 @@ Il metodo subscribe preleva come parametri tre funzioni:
 
 I tre parametri sono opzionali, ma essendo posizionali scrivendone solo uno sarà sempre quello di `next`, il secondo sarà sempre di `error` il terzo infine è di `complete`.
 
-#### Contatore 
+### Contatore 
 
 Creiamo ad esempio un contatore: 
 
@@ -4065,7 +4081,7 @@ Nota che il **setInterval** non è più un observable di rxjs, ma un meccanismo 
 
 
 
-### Errori 
+## Errori 
 
 Gli `observable` non monitorano solo i dati, ma anche gli errori.  
 Per lanciare un errore "controllato" bisogna utilizzare il metodo `error` nella funzione di callback che definisce il comportamento dell'observer.  All'interno della chiamata di error possiamo inserire una stringa di errore, un Error vero e proprio o comunque un qualsiasi tipo di dato.
@@ -4107,7 +4123,7 @@ mioOsservabile.subscribe(
 
 
 
-#### Errore su Contatore e nota su SetInterval
+### Errore su Contatore e nota su SetInterval
 
 Applichiamo l'errore su Contatore, se il contatore sfocia le 24 ore viene fermato con un errore.
 
@@ -4212,7 +4228,7 @@ Infatti un observer può essere chiuso attraverso l'`unsubscribe`, come già det
 
 
 
-### Complete 
+## Complete 
 
 Infine un observable può terminare la sua operatività. Anche questo evento può essere registrato, lato observer e lato subscriber.
 A tempo di creazione manderemo la notifica con l'istruzione `complete()`:
@@ -4250,7 +4266,7 @@ mioOsservabile.subscribe(
 
 
 
-#### Complete su Contatore
+### Complete su Contatore
 
 Modifichiamo infine il nostro Contatore in modo tale che possa terminare se raggiunge un determinato numero massimo di ore minuti o secondi. Ecco il codice typescript: 
 
@@ -4316,7 +4332,7 @@ getContatore(0,0,1).subscribe({secondi:number,minuti:number,ore:number}=> {
 
 Attenzione perché il complete block non viene chiamato se c'è stato un errore! 
 
-### Note su unsubscribe
+## Note su unsubscribe
 
 Quando un subscriber termina (*con errore o senza*) non è necessario in realtà utilizzare "`unsubscribe`" poiché il subscriber viene comunque chiuso.
 
@@ -4324,7 +4340,7 @@ Però <u>è buona pratica chiamare sempre</u> il metodo quando non più necessar
 
 
 
-## Operator: observable e pipeline
+# Operator: observable e pipeline
 
 Gli observer hanno un metodo chiamato `pipe()` che come parametro prende i così detti **rxjs operators**, metodi che consentono di manipolare dati prima di restituirli come succede per i metodi di iterazione degli array (prendono anche gli stessi nomi). 
 
@@ -4356,7 +4372,7 @@ flowchart LR
 
 Una lista completa si trova nella documentazione di rxjs [sul sito learnrxjs](https://www.learnrxjs.io/learn-rxjs/operators).  
 
-### pipe
+## pipe
 
 Il metodo `pipe()` è l'innesco necessario all'utilizzo degli operators, che vengono specificati come vari argomenti separati da virgole (secondo le regole dei varargs o degli parametri spread).
 
@@ -4368,7 +4384,7 @@ pipe( operators1(...),operators2(...),operators3(...),...)
 
 L'esecuzione viene in maniera sequenziale, i dati vengono maneggiati a partire dal primo parametro e finendo con l'ultimo. 
 
-### map
+## map
 
 Tramite il metodo di mapping si possono modificare e trasformare dinamicamente i vari valori in un nuovo formato, non importa il valore di arrivo. 
 La funzione di callback di mapping segue questa forma: 
@@ -4389,7 +4405,7 @@ function trasformation(value?: oggettoStream, index?: number): any{
 
 Ovvero è una funzione di trasformazione che analizza gli elementi dello stream ad uno ad uno 
 
-#### map su Contatore 
+### map su Contatore 
 
 implementiamo il map sul Contatore trasformando tutti i valori numerici secondo una funzione di formattazione che da un numero ne ricava una stringa con almeno un certo numero di caratteri, se il numero ha meno cifre, riempie con zeri meno significativi ( a sinistra).
 
@@ -4431,7 +4447,7 @@ Come si può notare ora nel subscriber i secondi, i minuti e le ore non sono pi�
 
 
 
-### filter
+## filter
 
 Tramite il metodo `filter` si possono filtrare dinamicamente i vari valori in modo da restituire un sottoinsieme dei valori. 
 La funzione di callback di mapping segue questa forma: 
@@ -4450,7 +4466,7 @@ function select(value?: oggettoStream, index?: number):boolean{
 
 
 
-#### filter sul routing
+### filter sul routing
 
 Un utilizzo pratico sulla funzione di `filter` è quello di controllare i vari eventi che interessano il routing.  
 
@@ -4496,7 +4512,7 @@ NavigationEnd poi fornisce a sua volta alcune variabili utili come `url` e `urlA
 
 
 
-### find
+## find
 
 Il metodo `find` è un corrispettivo di [filter](###filter) che fa passare la sola prima occorrenza a true: 
 La funzione di callback di mapping segue questa forma: 
@@ -4507,7 +4523,7 @@ filter(select: Function, thisArg: any): Observable
 
 La funzione di selezione deve restituire true ogni qual volta il dato passa il filtro, false se deve essere filtrato. 
 
-### Tap, ovvero usare i dati prima della subscribe
+## Tap, ovvero usare i dati prima della subscribe
 
 Tap è usato per analizzare ed utilizzare i dati prima di chiamare su un observable la subscribe. Può servire ad esempio ad effettuare il `log` delle operazioni
 
@@ -4531,7 +4547,7 @@ tap ( elem => {
 
 Le funzioni di *errore* e *completamento* sono parametri opzionali. 
 
-### gestire errori con pipe : catchError
+## gestire errori con pipe : catchError
 
 È possibile utilizzare una pipa particolare, catchError, per gestire e manipolare gli errori.  
 
@@ -4555,7 +4571,7 @@ catchError(error=>{ return throwError("errore") })
 
 
 
-## Subject
+# Subject
 
 I `Subject` sono un tipo speciale di `Observer` che possono "produrre" dati dall'esterno.  
 
@@ -4600,13 +4616,13 @@ let sottoscrizione = ilMioSubject.pipe(operator(valore=>{...})).subscribe(valore
 
 
 
-### Nota su EventEmitter e Subject
+## Nota su EventEmitter e Subject
 
 Secondo la [documentazione ufficiale di Angular](https://angular.io/api/core/EventEmitter), `EventEmitter` estende effettivamente il `Subject`. 
 
 
 
-## Forms
+# Forms
 
 Ci sono due modi di fare form con angular:
 
@@ -4619,7 +4635,7 @@ Ci sono due modi di fare form con angular:
 
 
 
-### Template Directive: NgForm e NgModel
+## Template Directive: NgForm e NgModel
 
 È stato già visto il modo in cui si può utilizzare [NgModel](###Two-Way-Binding) per sincronizzare un form input ad una variabile di typescript.  
 
@@ -4700,7 +4716,7 @@ Alla pressione del pulsante **submit**, le informazioni vengono stampate in cons
 
 
 
-#### Utilizzo di ViewChild con ngForm
+### Utilizzo di ViewChild con ngForm
 
 È ovviamente molto più comodo, più che portarsi dentro i vari metodi il form come ElementRef, utilizzare a [ViewChild](###@ViewChild) per riferirsi al form di registrazione.
 Ecco come cambia il typescript in questo caso: 
@@ -4727,7 +4743,7 @@ export class RegisterComponent {
 
 
 
-#### Proprietà NgForm
+### Proprietà NgForm
 
 Quali sono le altre proprietà interrogabili di `NgForm` ? 
 
@@ -4748,7 +4764,7 @@ ce ne sono parecchie, elenchiamone alcune:
 
 
 
-#### Controllare la validità di un campo 
+### Controllare la validità di un campo 
 
 Per controllare la validità di un campo si può controllare il campo `valid` o il suo contrario, `invalid` dell'`NgForm`. 
 
@@ -4857,14 +4873,14 @@ Così facendo il campo Descrizione non sarà soggetto alla colorazione del **CSS
 
 
 
-#### Le classi ngform aggiunte dinamicamente 
+### Le classi ngform aggiunte dinamicamente 
 
 Esattamente come [ng-valid e ng-invalid](###Controllare-la-validità-di-un-campo) molte altre classi vengono aggiunte alle componenti di Angular durante il processo di validazione.  
 Viene aggiunta una per ogni [Proprietà di NgForm](Proprietà-NgForm) che si chiama come la proprietà stessa ma con un `ng-` davanti.  
 
 
 
-#### Proprietà dei singoli forms con NgModel
+### Proprietà dei singoli forms con NgModel
 
 Le proprietà viste prime si riferiscono contemporaneamente a tutto il form: se un solo campo di input non è valido, l'intero form viene considerato come tale.
 
@@ -4968,7 +4984,7 @@ La scritta accanto appare *solo se il campo di testo* è non valido in questo ca
 
 
 
-#### Form, NgModel e Binding
+### Form, NgModel e Binding
 
 È ancora possibile associare la proprietà di `NgModel` ad una variabile all'interno della classe typescript con la sintassi: 
 
@@ -4988,7 +5004,7 @@ Oppure un associazione Bilaterale:
 
 Utile per mettere una variabile di default.
 
-#### NgModelGroup
+### NgModelGroup
 
 È possibile raggruppare alcuni input in dei `<div>` e controllarne la validità o lo stato "**a blocchi**", attraverso l'attributo `ngModelGroup`, ad esempio volendo raggruppare tutti i dati anagrafici: 
 
@@ -5041,7 +5057,7 @@ Possiamo poi usare le proprietà di validazione sul solo settore dell'anagrafica
 
 
 
-#### setValue
+### setValue
 
 Possiamo dare un valore di default a tutti i nostri componenti del form (non farlo a tempo di init del componente, poiché se inizializzata con l'annotazione `ViewChild` potrebbe essere undefined il valore ancora) tramite il metodo di `NgForm` `setValue`: 
 
@@ -5054,7 +5070,7 @@ formRegistrazione.setValue({
 
 
 
-### Reactive  Forms
+## Reactive  Forms
 
 I form si possono creare anche direttamente da codice Typescript, in modo totalmente dinamico e reattivo. 
 
@@ -5249,7 +5265,7 @@ Vedremo come al variare dei valori del form venga cambiato anche il valore della
 
 
 
-#### Validator reattivi
+### Validator reattivi
 
 Il `FormControl` come parametro non prende solo il valore di default, ma anche i "**Validatori**" o `Validators`.
 Molti **Validatori** di default si trovano nel package `@angular/forms`, vediamo come utilizzarli.
@@ -5304,7 +5320,7 @@ Si possono passare più validatori alla volta in un array, così:
 
 
 
-#### Controllare i singoli form reattivi
+### Controllare i singoli form reattivi
 
 La soluzione con `@ViewChild` utilizzata nel template driven ovviamente non funziona. Per controllare i singoli stati di validità ad esempio bisogna agire attraverso variabile del form reattivo, in particolare con il metodo `get`. Ecco ad esempio come colorare le etichette dei checkbox di rosso utilizzando lo stato di validità: 
 
@@ -5349,7 +5365,7 @@ In questo caso la variabile `nomeForm.get('tipo')` restituisce una variabile di 
 
 
 
-#### Form group innestati
+### Form group innestati
 
 Anche nei Forms Reattivi è possibile avere un meccanismo di raggruppamento. 
 
@@ -5526,7 +5542,7 @@ Il risultato, in caso di errore, dovrebbe essere simile a questo:
 
 
 
-#### Array di Form
+### Array di Form
 
 È anche possibile creare array di form, nel caso in cui si abbia una lista di campi compilabili ad esempio. 
 
@@ -5615,7 +5631,7 @@ Lato html:
 
 
 
-#### Custom Validators
+### Custom Validators
 
 Si possono scrivere dei validatori personalizzati, in questo modo si può ampliare ancora di più il numero di controlli che si possono fare su un determinato campo. 
 
@@ -5716,7 +5732,7 @@ ngOnInit(): void {
 
 
 
-##### Throubleshoot : richiamare una variabile con this
+#### Throubleshoot : richiamare una variabile con this
 
 Riprendiamo l'esempio dell'email, ma elenchiamo i domini validi in una variabile di classe: 
 
@@ -5760,7 +5776,7 @@ ngOnInit(): void {
 
 
 
-#### Validator Custom con parametri 
+### Validator Custom con parametri 
 
 Se abbiamo la necessità di specificare ulteriori parametri nel validatore possiamo anche decidere di creare un instanza di `ValidatorFn`: ovvero un validatore a cui possiamo passare dei parametri. 
 
@@ -5796,7 +5812,7 @@ Notare come questa volta al validatore vanno passati i parametri.
 
 
 
-#### Async Validator
+### Async Validator
 
 I validatori possono essere anche asincroni sfruttando gli [Observable e rxjs framework](####Subscription-e-Observable).
 
@@ -5861,7 +5877,7 @@ ngOnInit(): void {
 }
 ```
 
-##### Esempio validatore email asincrono con Promise
+#### Esempio validatore email asincrono con Promise
 
 ```typescript
 validaEmailAsincrono(formEmail:FormControl):Promise<any>|Observable<any>{
@@ -5881,7 +5897,7 @@ validaEmailAsincrono(formEmail:FormControl):Promise<any>|Observable<any>{
 
 
 
-##### Esempio validatore email asincrono con Promise
+#### Esempio validatore email asincrono con Promise
 
 ```typescript
 validaEmailAsincrono(formEmail:FormControl):Promise<any>|Observable<any>{
@@ -5900,7 +5916,7 @@ validaEmailAsincrono(formEmail:FormControl):Promise<any>|Observable<any>{
 }
 ```
 
-##### Timeout e ng-pending
+#### Timeout e ng-pending
 
 Se proviamo a fare un validatore con un timeout, scopriremo una nuova classe css che viene richiamata durante il check. Infatti se la validazione non è ancora terminata, angular aggiunge al form la classe `ng-pending`
 
@@ -5949,11 +5965,11 @@ per 2 secondi.
 
 
 
-#### Observable sui FormControl 
+### Observable sui FormControl 
 
 I FormControl hanno degli observable interrogabili per monitorare il cambio del valore e il cambio dello stato dei vari input field.
 
-##### valueChanges
+#### valueChanges
 
 Monitora il cambio dei valori
 
@@ -5965,7 +5981,7 @@ this.nomeForm.get(["anagrafica","email"]).valueChanges.subscribe(nuovoValore=>{
 
 
 
-##### statusChanges
+#### statusChanges
 
 Monitora il cambio degli stati (`valid`, `invalid` e `pending`): 
 
@@ -5975,7 +5991,7 @@ this.nomeForm.get(["anagrafica","email"]).statusChanges.subscribe(nuovoStato=>{
 })
 ```
 
-#### setValue
+### setValue
 
 Ovviamente si possono impostare manualmente i parametri. Sia per metterci dei valori di default, sia come risposta a determinati eventi per "aggiustarli" ad esempio. 
 
@@ -6016,7 +6032,7 @@ this.nomeForm.get(["anagrafica","email"]).setValue("@.")
 
 
 
-### Submit 
+## Submit 
 
 I pulsanti aggiunti all'interno di una form automaticamente hanno associato il metodo "`submit`" della form. 
 Per evitare questo comportamento, se si vogliono inserire più pulsanti ad esempio, è necessario indicare il tipo di pulsante: 
@@ -6083,13 +6099,13 @@ Nell'esempio qui sopra "Accedi" è associato al `type=submit` quindi invocherà 
 Al contrario "Reset" è associato a `type=button` ed evocherà solo il metodo `reset`
 
 
-## Pipe
+# Pipe
 
 [Da non confondere con le pipeline di rxjs](##Operator:-observable-e-pipeline), sono una metodologia per cambiare dinamicamente l'output durante un interpolazione di stringhe nell'html.
 
 Ogni pipe può essere richiamata *anche con dei parametri*. 
 
-### Usare una pipe 
+## Usare una pipe 
 
 Da utilizzare nel template **html**, in un interpolazione: 
 
@@ -6125,7 +6141,7 @@ ___
 
 
 
-#### Parametri delle pipe
+### Parametri delle pipe
 
 Alcune pipe hanno dei parametri impostabili, ciò consente di personalizzarne l'output in base le necessità. Ad esempio la pipe `date`, che consente di stampare in modo elegante una data. 
 Supponiamo il seguente codice typescript: 
@@ -6198,7 +6214,7 @@ Risultato:
 
 
 
-#### Guida ufficiale
+### Guida ufficiale
 
 Esiste un gran numero di pipe già implementate da angular, e [le troviamo tutte sulla documentazione ufficiale](https://angular.io/guide/pipes). Per fare qualche esempio abbiamo: 
 - DatePipe (formatta la data a stringa) : esempio `{{variabileData|date:'yyyy/MM/dd, HH:mm'}}`
@@ -6216,7 +6232,7 @@ Esiste un gran numero di pipe già implementate da angular, e [le troviamo tutte
 
 
 
-### Concatenare le pipe
+## Concatenare le pipe
 
 Le pipe si possono concatenare, o meglio puoi trasformare un output a sua volta trasformato da una pipe. 
 Ad esempio utilizziamo le pipe `slice` e `uppercase` 
@@ -6245,7 +6261,7 @@ ___
 
 
 
-### Creare una propria PIPE 
+## Creare una propria PIPE 
 
 Le pipe son classi **typescript** che forniscono un particolare tipo di metodo, ovvero `transform`. 
 Per questioni di sicurezza (non è obbligatorio) sarebbe consono implementare la classe `PipeTransform` da `@angular/core`.
@@ -6330,7 +6346,7 @@ ___
 
 
 
-#### Passare i parametri ad una pipe custom
+### Passare i parametri ad una pipe custom
 
 Il secondo parametro del metodo `transform` è un vettore *varargs* (o REST, che dir si voglia), o meglio un vettore di lunghezza arbitraria con parametri `any`.
 
@@ -6383,7 +6399,7 @@ ___
 
 
 
-### Pipe al di fuori delle string interpolation
+## Pipe al di fuori delle string interpolation
 
 In realtà le pipe possono essere usate per trasformare anche variabili al di fuori di una string interpolation. 
 Ad esempio in un `ngFor` filtriamo un vettore di stringhe con una pipe. 
@@ -6453,7 +6469,7 @@ Ovvero tutti i nomi della lista!
 
 
 
-### Pipe pure e non, il problema del ricalcolo
+## Pipe pure e non, il problema del ricalcolo
 
 Se prendiamo il filtro [fatto in questa circostanza](###Pipe-al-di-fuori-delle-string-interpolation) e creiamo un pulsante che aggiunge dei valori al vettore dinamicamente noteremo un comportamento strano: ovvero la pipe **non ricalcola il filtro al variare dei valori del vettore**!
 
@@ -6516,7 +6532,7 @@ Se proviamo a premere il pulsante noteremo il comportamento di cui prima... Quin
 
 
 
-#### Il problema del ricalcolo
+### Il problema del ricalcolo
 
 Dover ricalcolare la pipe ad ogni cambiamento dei valori è purtroppo un consumo di performance notevole, onde per cui angular ha deciso preventivamente di fare una scelta: **le pipe pure** non ricalcolano il valore se cambia. Son statiche. 
 
@@ -6535,14 +6551,14 @@ Aggiungendo `"pure":false` stiamo ad indicare che la nostra non è più *una pip
 
 
 
-#### Change detection Strategy 
+### Change detection Strategy 
 
 In linea teorica si può cambiare la strategia di detecting delle modifiche di angular. 
 Ma è un argomento avanzato, [qui ulteriori informazioni](https://blog.angular-university.io/onpush-change-detection-how-it-works/).
 
 
 
-### Async pipe 
+## Async pipe 
 
 Un tipo particolare di pipe è `async` . Il suo scopo è quello di aspettare il risultato di un operazione asincrona per mostrare il valore. 
 
@@ -6575,7 +6591,7 @@ mettere in pipe async garantirà che esca il risultato dopo 3 secondi in maniera
 
 
 
-## Metodi di persistenza 
+# Metodi di persistenza 
 
 Angular è principalmente un meccanismo di Frontend, creare della logica di business tramite questo framework non è né consigliabile né tanto meno semplice.
 
@@ -6585,13 +6601,13 @@ Nel primo caso si parlerà di **HTTP Request**, nel secondo caso di **local stor
 
 
 
-## HTTP Request e consultazioni API
+# HTTP Request e consultazioni API
 
 Angular può effettuare ovviamente diversi tipi di richieste HTTP, e tutto avviene più facilmente grazie al modulo `HttpClientModule` importato da `@angular/common/http` . Il modulo va ovviamente registrato nell' `app.module.ts`, nel vettore degli **import**.
 
 
 
-### HttpClient
+## HttpClient
 
 Innanzitutto bisogna importare `HttpClient` da `@angular/common/http`. 
 
@@ -6631,7 +6647,7 @@ Tutti questi metodi al loro interno prendono molti parametri, analizziamo quelli
 - url : l'url della chiamata
 - body : se è una chiamata post prenderà ad esempio un json come body
 
-### POST 
+## POST 
 
 Ecco un esempio di post: 
 
@@ -6717,7 +6733,7 @@ export class MioComponente {
 
 
 
-#### HTTP: Best Practice
+### HTTP: Best Practice
 
 È una best practice quella di fare una chiamata in un servizio dedicato alle chiamate http e quindi restituire la chiamata come `Observable`, su cui fare poi la `subscribe` in un secondo momento. 
 
@@ -6765,7 +6781,7 @@ export class MioComponente {
 
 
 
-#### Fetching State
+### Fetching State
 
 Potrebbe essere anche utile tenere traccia del "`fetchingState`", essendo infatti la chiamata di `HttpClient` asincrona, il risultato non viene generato immediatamente. 
 
@@ -6804,7 +6820,7 @@ export class MioComponente {
 
 
 
-### Specificare il tipo di dati richiesti
+## Specificare il tipo di dati richiesti
 
 Si può specificare con un tipo generico il tipo di dato che ci si aspetta in una chiamata. Accando al metodo che stiamo chiamando scriviamo quindi: 
 
@@ -6830,13 +6846,13 @@ export class ServizioPost {
 
 
 
-### HTTP Request Options 
+## HTTP Request Options 
 
 Il terzo parametro di una chiamata *POST* (secondo nel caso di metodi che non hanno il body, come *GET*) è un oggetto che rappresenta diverse opzioni, se supportate dalla chiamata stessa. 
 
 Possiamo vedere tutti i parametri di una [HTTP Request nella documentazione ufficiale](https://angular.io/api/common/http/HttpRequest).
 
-#### HTTP Header 
+### HTTP Header 
 
 
 Ad esempio l'header!  In TypeScript è possibile settare un Header tramite la classe `HttpHeader `, importandola da `"@angular/common/http"`:
@@ -6866,7 +6882,7 @@ this.http.post("http://ind.iri.zzo.ip",{},{"headers":new HttpHeaders({ "custom":
 
 
 
-#### HTTP Params
+### HTTP Params
 
 Un altro oggetto che possiamo alle richieste sono i QueryParams, sempre se supportati dall'endpoint. 
 Similmente agli Header abbiamo una classe ad hoc per i parametri: `HttpParams`, sempre importabile da `@angular/common/http`, tuttavia il modo in cui si impostano i parametri differisce dall'header poiché lo si fa tramite metodi: 
@@ -6886,7 +6902,7 @@ Ovviamente è possibile anche passarlo come variabile a se stante.
 
 
 
-#### HTTP Observe
+### HTTP Observe
 
 È sicuramente più particolare il parametro `observe`, non serve infatti a chi riceve la chiamata ma è un parametro di configurazione di HttpClient stesso. 
 I valori che può assumere sono limitati e calibrerà il modo in cui viene restituito l'oggetto della chiamata:
@@ -6897,7 +6913,7 @@ I valori che può assumere sono limitati e calibrerà il modo in cui viene resti
 
 
 
-##### Observe events
+#### Observe events
 
 Quando un tipo di richiesta ha `observe=events` il modo di gestire la risposta cambia. 
 
@@ -6957,7 +6973,7 @@ if(HttpEventType.Sent==risposta.type){
 
 
 
-#### HTTP Response Type 
+### HTTP Response Type 
 
 È possibile forzare la tipologia di risposta da un opzione che passiamo al costruttore. Le tipologie di Response possibili sono: 
 
@@ -6991,7 +7007,7 @@ export class MioComponente {
 }
 ```
 
-### HttpInterceptor 
+## HttpInterceptor 
 
 Un concetto interessante sono gli `interceptor`, ovvero dei servizi particolari che estendono la classe `HttpInterceptor` (dal package `@angular/common/http`).
 
@@ -7042,7 +7058,7 @@ Come possiamo notare è stato aggiunto il servizio utilizzando un oggetto con de
 
 
 
-#### Il parametro multi specificando più interceptor
+### Il parametro multi specificando più interceptor
 
 Supponendo di avere più interceptor, il parametro `multi` impostato a `true` permette c*he possano essere eseguiti tutti anziché sovrascriversi* a vicenda.
 
@@ -7080,7 +7096,7 @@ export class AppModule { }
 
 È da considerarsi anche cruciale l'ordine con il quale vengono scritti i vari **intercepto**r, infatti determineranno anche l'ordine di esecuzione in questo caso `IlMioIntercpetor` verrà eseguito prima di `IlMioSecondoInterceptor`.
 
-### Modificare la richiesta nell'interceptor
+## Modificare la richiesta nell'interceptor
 
 Uno dei motivi che porta a creare un interceptor è quello di modellare le richieste a priori. 
 
@@ -7116,7 +7132,7 @@ function intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEve
 
 
 
-### Utilizzare la pipe con l'interceptor 
+## Utilizzare la pipe con l'interceptor 
 
 Possiamo ulteriormente modificare la richiesta utilizzando le pipe di rxjs. Questa si applica al metodo `handle()` e va restituita senza ulteriori modifiche.
 
@@ -7135,7 +7151,7 @@ function intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEve
 
 
 
-### HttpResolver
+## HttpResolver
 
 Uno dei maggiori utilizzi di avere delle chiamate HTTP è quello di recuperare e salvare dati da un server. Spesso però questi dati devono essere disponibili ancora prima che la nostra pagina venga caricata, per accedere ad esempio ad una risorsa specifica. 
 
@@ -7187,7 +7203,7 @@ Ovviamente essendo un servizio, bisogna anche ricordarsi tutte le altre regole d
 
 
 
-### La guardia come HttpResolver
+## La guardia come HttpResolver
 
 [Come abbiamo già visto](###Catena-di-chiamate-di-Guardie-e-Resolvers) potrebbe essere necessario avere determinate informazioni a livello di guardia, nel particolarissimo caso delle richieste http è necessario quindi restituire non più un booleano, ma il risultato della post! 
 
@@ -7221,7 +7237,7 @@ Non si deve scrivere la `subscribe` ovviamente.
 
 
 
-## Memoria Locale 
+# Memoria Locale 
 
 Il browser ha accesso a diversi tipi di memoria locale, che consentono alle applicazioni web di salvare e riprendere dati senza dover per forza di cose utilizzare un servizio esterno.
 
@@ -7237,7 +7253,7 @@ Queste sono:
 
 
 
-## LocalStorage
+# LocalStorage
 
 La **local storage** è un oggetto messo a disposizione da Javascript per poter memorizzare dati nel dispositivo senza utilizzare alcun servizio esterno. Questo viene fatto utilizzando l'accesso al disco che possiede il browser, è tuttavia oggi sconsigliato poiché lento rispetto a soluzioni come *IndexedDB*.
 
@@ -7263,13 +7279,13 @@ localStorage["nomechiave"]="valore"
 
 
 
-## Component Factory e componenti dinamici 
+# Component Factory e componenti dinamici 
 
 I componenti possono essere creati dinamicamente da codice typescript, questo approccio potrebbe essere utile nel caso in cui l'interfaccia debba cambiare in base alla logica di alcune azioni. 
 
 
 
-### Esempio alert
+## Esempio alert
 
 Procediamo ad esempio con lo sviluppo di un alert che possa essere richiamato da codice da qualunque altra parte.
 
@@ -7444,7 +7460,82 @@ Esempio visivo (alert di tipo *danger* con titolo "*ATTENZIONE*" e messaggio "*e
 
 
 
-### ComponentFactory 
+
+## Direttiva per la creazione dinamica
+
+Creiamo una direttiva con al suo interno un viewContainerRef
+
+```typescript
+@Directive({selector:"[factoryPlaceholder]"})
+export class FactoryPlaceholderDirective {
+	constructor(private viewContainerRef:ViewContainerRef) {
+		
+	}
+}
+```
+
+
+
+Ricordiamoci di aggiungerla all'AppModule: 
+
+```typescript
+@NgModule({
+	declarations: [
+		/*.....*/,
+		FactoryPlaceholderDirective
+	],
+	imports: [
+		/*.....*/
+	],
+	providers: [
+		/*.....*/
+	],
+	bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+
+
+Teniamo a mente il selector utilizzato.
+
+## ViewChild e ngtemplate  per la direttiva dinamica
+
+Nel componente in cui vogliamo utilizzare la componente dinamica bisogna ora introdurre la direttiva creata come variabile inizializzata da una ViewChild. Il ViewChild deve poi riferirsi ad un ngtemplate nel template html : 
+
+```typescript
+@Component({
+    selector:"mio-selettore",
+    templateUrl:"mio.componente.html",
+    StyleUrls:["mio.componente.css"]
+})
+export class Componente {
+    @ViewChild(FactoryPlaceholderDirective, {static:true}) 
+	factoryPlaceholder!: FactoryPlaceholderDirective; 
+}
+```
+
+Il template: 
+
+```html
+<button (click)="eventoCreazioneComponente()">
+    CREA ALERT!
+</button>
+
+<ng-template factoryPlaceholder></ng-template>
+```
+
+
+
+> **<u>NOTA</u>**: 
+>
+> Nell' `ng-template` abbiamo utilizzato la stessa etichetta che abbiamo utilizzato come selettore della direttiva. Nel ViewChild abbiamo poi passato direttamente la classe della direttiva, angular poi farà un matching del selettore della direttiva con l'etichetta dell' `ng-template`. 
+>
+> Se si ha necessità di etichette diverse si può utilizzare l'attributo `read` tra le opzioni di `ViewChild`: 
+>
+> `@ViewChild(FactoryPlaceholderDirective, {static:true, read:'altraEtichetta'}) ` 
+
+## ComponentFactory 
 
 È da introdurre il `ComponentFactoryResolver`, ovvero quel componente che consente di creare altri componenti direttamente da typescript 
 
@@ -7461,9 +7552,16 @@ Per utilizzarlo bisogna inizializzarlo come se fosse un servizio.
     StyleUrls:["mio.componente.css"]
 })
 export class Componente {
+    @ViewChild(FactoryPlaceholderDirective, {static:true}) 
+	factoryPlaceholder!: FactoryPlaceholderDirective; 
+    
     constructor(private componentFactoryResolver:ComponentFactoryResolver){
      	/* ..... */   
     }
+    
+    eventoCreazioneComponente(){
+    	/* CREAZIONE COMPONENTE */
+	}
 }
 ```
 
@@ -7471,39 +7569,94 @@ export class Componente {
 
 Il metodo da utilizzare per poi creare un componente è `resolveComponentFactory`, a cui passare il tipo di un componente che deve essere creato. Nel caso dell'alert `MioAlert`. 
 
-Il `ComponentFactoryResolver` crea una variabile di tipo `ComponentFactory` . 
+- Il `ComponentFactoryResolver` crea una variabile di tipo `ComponentFactory` . 
+- Si memorizza la `ViewContainerRef` della direttiva in una variabile
+- si applica il metodo clear per pulirla eventualmente fosse reinderizzata
+- si applica il metodo `createComponent` sul `viewContainerRef` passando la factory.
 
 La classe `ComponentFactory<T>` è anch'essa del package `@angular/core` e porta con sé un tipo generico, precisamente del componente che deve essere creato dinamicamente. 
 
+Ecco il procedimento completo: 
+
 ```typescript
 eventoCreazioneComponente(){
-    let mioAlertFactory : ComponentFactory<MioAlert> = componentFactoryResolver.resolveComponentFactory();
+    const alertFactory: ComponentFactory<MioAlert> = this.componentFactoryResolver.resolveComponentFactory(MioAlert);
+    
+    const viewContainerRef = this.factoryPlaceholder.viewContainerRef; 
+    viewContainerRef.clear();
+
+    let alertRef= viewContainerRef.createComponent<MioAlert> (alertFactory);
 }
 ```
 
 
 
-Ora per visualizzare effettivamente il componente, c'è bisogno di creare una direttiva apposita  
+### Errore dell'entry component 
+
+Da Angular 9 in poi è stato fatto un cambiamento dietro le quinte che va a liberare il programmatore da quella che è la necessità di configurare il così detto "`EntryComponent`"
 
 
 
-### Direttiva per ComponentFactory
-
-Creiamo una direttiva con al suo interno un viewContainerRef
+Se si riceve un errore riguardante l'entryComponent basta andare nell'appModule e aggiungere il vettore `entryComponent`: 
 
 ```typescript
-@Directive({selector:"[factoryPlaceholder]"})
+@NgModule({
+	declarations: [
+		/*.....*/,
+        MioAlert,
+		FactoryPlaceholderDirective
+	],
+	imports: [
+		/*.....*/
+	],
+	providers: [
+		/*.....*/
+	],
+	bootstrap: [AppComponent],
+    entryComponent:[MioAlert]
+})
+export class AppModule { }
+```
 
-export class FactoryPlaceholderDirective {
-	constructor(private viewContainerRef:ViewContainerRef) {
-		
-	}
+
+
+Ovviamente è ancora necessario anche nel vettore delle `declaration`. 
+
+## Cambiare i dati del componente 
+
+Se il componente creato, come nel caso della nostra *alert*, ha dei dati che normalmente andrebbero impostati in modo tale da poterlo visualizzare, creare il *messaggio* testuale, il *titolo*, il flag di *chiusura* e la *tipologia*, bisogna utilizzare la variabile "`instance`" sull'element reference creato  da `createComponent`. Facciamolo con la nostra alert: 
+
+```typescript
+eventoCreazioneComponente(){
+    const alertFactory: ComponentFactory<MioAlert> = this.componentFactoryResolver.resolveComponentFactory(MioAlert);
+    
+    const viewContainerRef = this.factoryPlaceholder.viewContainerRef; 
+    viewContainerRef.clear();
+
+    let alertRef= viewContainerRef.createComponent<MioAlert> (alertFactory);
+    
+    alertRef.instance.message="errore"
+
+    alertRef.instance.closed=false;
+
+    alertRef.instance.titolo="ATTENZIONE"
+
+    alertRef.instance.tipologia="ALERT"
 }
 ```
 
 
 
+ Ora il risultato dovrebbe essere completo. 
 
+
+
+# Moduli 
+
+In angular il concetto di "modulo" è alla base della creazione stessa dell'applicazione. 
+Un `NgModule` è una sezione totalmente indipendente dell'applicazione che può esportare e importare Componenti da altri moduli. 
+
+Normalmente, più moduli, **non comunicano tra di loro**, non possono vedere nessuno dei componenti dichiarati all'interno di altri moduli ne servizi. Son come scatole chiuse 
 
 
 
@@ -7511,4 +7664,4 @@ export class FactoryPlaceholderDirective {
 
 > <u>*CHECKPOINT:*</u> 
 >
-> riprendere da **Sezione** `11/31` **Lezione** `305/463` (da vedere)
+> riprendere da **Sezione** `11/31` **Lezione** `323/463` (da vedere)
