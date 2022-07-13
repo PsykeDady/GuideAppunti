@@ -25,7 +25,7 @@ GNU Free Documentation License
 
 Per la versione completa consultare [Il Sito Ufficiale](https://www.gnu.org/licenses/fdl-1.3.txt).
 
-Potete trovare il sorgente originale
+Potete trovare il sorgente originale in libera consultazione o per partecipare con modifiche/aggiunte al seguente repository: [PsykeDady/GuideAppunti](https://github.com/PsykeDady/GuideAppunti)
 
 
 
@@ -37,7 +37,7 @@ Per stilare la guida son stati utilizzati i seguenti strumenti :
   - Son stati utilizzati i grafici [Mermaid](https://mermaid-js.github.io/mermaid/#/)
 - [Il corso Udemy di Academind](https://www.udemy.com/course/the-complete-guide-to-angular-2) 
 
-## I MIEI PROGETTI: 
+## I MIEI PROGETTI
 
 Puoi trovare i progetti su cui mi sto esercitando nei seguenti link:
 
@@ -53,7 +53,7 @@ Puoi trovare i progetti su cui mi sto esercitando nei seguenti link:
 Angular &egrave; un framework open source di nodejs che consente di scrivere in maniera molto semplice delle single app application.
 
 
-Angular utilizza **Typescript**, ovvero un linguaggio (Sviluppato da Microsoft) derivato da Javascript che lo completa aggiungendo la tipizzazione statica (rendendolo di fatti un linguaggio più robusto). Il client di Angular trasforma poi [Typescript in JavaScript](typescript.md).
+Angular utilizza **Typescript**, ovvero un linguaggio (Sviluppato da Microsoft) derivato da Javascript che lo completa aggiungendo la tipizzazione statica (rendendolo di fatti un linguaggio più robusto). Il client di Angular trasforma poi [Typescript in JavaScript](https://linuxhub.it/articles/howtodev-typescript-introduzione/).
 
 ### Versioni di angular
 
